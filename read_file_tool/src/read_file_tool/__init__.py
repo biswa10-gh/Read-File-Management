@@ -1,3 +1,3 @@
-from .tool import ReadFileTool
+from tool import ReadFileTool
  
 __all__ = ["ReadFileTool"]
