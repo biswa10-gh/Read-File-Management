@@ -1,13 +1,14 @@
-from crewai.tools import Tool
+from crewai.tools import BaseTool, tool
 import csv
 import json
 import PyPDF2
 from docx import Document
  
-class ReadFileTool(Tool):
+class ReadFileTool(BaseTool):
     name = "read_file_tool"
     description = "Read CSV, PDF, TXT, DOCX, and JSON files"
  
+    @tool
     def run(self, file_path: str):
         file_type = file_path.split(".")[-1].lower()
  
