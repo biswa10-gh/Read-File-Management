@@ -18,7 +18,8 @@ import json
 import PyPDF2
 from docx import Document
  
-@tool("read_file_tool")
+# @tool("read_file_tool")
+@tool
 def read_file_tool(file_path: str):
     """
     Reads and returns content from CSV, PDF, TXT, DOCX, or JSON files.
